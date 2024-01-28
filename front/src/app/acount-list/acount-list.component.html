@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Account List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Cin</th>
+                    <th>Accountnumber</th>
+                    <th>Agency</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let account of accounts | async">
+                    <td>{{ account.id }}</td>
+                    <td>{{ account.firstName }}</td>
+                    <td>{{ account.lastName }}</td>
+                    <td>{{ account.cin }}</td>
+                    <td>{{ account.accountNumber }}</td>
+                    <td>{{ account.agency }}</td>
+                    <td>{{ account.amount }}</td>
+                    <td>
+                        <button (click)="deleteAccount(account.id)" class="btn btn-danger">Delete</button>
+                        <button (click)="accountDetails(account.id)" class="btn btn-info"
+                            style="margin-left: 10px;">Details</button>
+                            <button (click)="accountUpdate(account.id)" class="btn btn-info" style="margin-left: 10px;">Update</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

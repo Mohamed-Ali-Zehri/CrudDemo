@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>Update Account</h3>
+    <div style="width: 400px;">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" required [(ngModel)]="account.firstName"
+                    name="firstName">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required [(ngModel)]="account.lastName"
+                    name="lastName">
+            </div>
+
+            <div class="form-group">
+                <label for="cin">Cin</label>
+                <input type="text" class="form-control" id="cin" required [(ngModel)]="account.cin" name="cin">
+            </div>
+
+            <div class="form-group">
+                <label for="accountNumber">Account Number</label>
+                <input type="text" class="form-control" id="accountNumber" required [(ngModel)]="account.accountNumber"
+                    name="accountNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="agency">Agency</label>
+                <input type="text" class="form-control" id="agency" required [(ngModel)]="account.agency" name="agency">
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="text" class="form-control" id="amount" required [(ngModel)]="account.amount" name="amount">
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>
